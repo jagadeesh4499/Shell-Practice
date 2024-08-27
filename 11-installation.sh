@@ -7,18 +7,18 @@ then
     exit 1
 fi
 #Installing Tree
-dnf list installed tree
+dnf list installed mvn
 if [ $? -ne 0 ]
 then
-    echo "Tree is not installed....going to install it"
-    dnf install tree -y
+    echo "Maven is not installed....going to install it"
+    dnf install maven -y
     if [ $? -ne 0 ]
     then
-        echo "Tree installation not sucess"
+        echo "Maven installation not sucess"
         exit 1
     else
-        echo "Tree installation is success"
+        echo "Maven installation is success"
     fi
 else
-    echo "Tree is already installed"
+    echo "Maven is already installed"
 fi  
