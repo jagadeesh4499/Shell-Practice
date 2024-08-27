@@ -6,9 +6,9 @@
 
 
 echo "Please enter Username :"
-read $USERNAME
+read USERNAME
 echo "Entered Username is : $USERNAME"
 
 echo "Please enter Password :"
-read -s $PASSWORD
+read -s PASSWORD
 echo "Entered Password is : $PASSWORD"
