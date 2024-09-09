@@ -17,7 +17,7 @@
 #     fi
 # }
 # CHECK_ROOT
-dnf list installed tree
+#dnf list installed tree
 # if [ $? -ne 0 ]
 # then
 #     echo "tree is not installed.....going to install it"
@@ -27,4 +27,4 @@ dnf list installed tree
 #     echo "tree is already installed."
 # fi
 
-dnf list installed maven
+dnf list installed mvn
