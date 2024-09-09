@@ -17,12 +17,12 @@ VALIDATE(){
     fi
 }
 CHECK_ROOT
-dnf list installed mvn
+dnf list installed tree
 if [ $? -ne 0]
 then
-    echo "Maven is not installed.....going to install it"
-    dnf install maven -y
-    VALIDATE $? "Maven"
+    echo "tree is not installed.....going to install it"
+    dnf install tree -y
+    VALIDATE $? "tree"
 else
-    echo "Maven is already installed."
+    echo "tree is already installed."
 fi
