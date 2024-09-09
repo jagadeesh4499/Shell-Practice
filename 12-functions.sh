@@ -26,11 +26,11 @@ then
 else
     echo "tree is already installed."
 fi
-dnf list installed mvn
+dnf list installed ansible
 if [$? -ne 0 ]
 then 
-    echo "Maven is not installed.....going to install it"
-    dnf install maven -y
-    VALIDATE $? "Maven"
+    echo "ansible is not installed.....going to install it"
+    dnf install ansible -y
+    VALIDATE $? "ansible"
 else
-    echo "Maven is already installed"
+    echo "ansible is already installed"
