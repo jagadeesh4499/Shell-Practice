@@ -27,7 +27,7 @@ else
     echo "tree is already installed."
 fi
 dnf list installed ansible
-if [$? -ne 0 ]
+if [ $? -ne 0 ]
 then 
     echo "ansible is not installed.....going to install it"
     dnf install ansible -y
