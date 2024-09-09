@@ -34,3 +34,4 @@ then
     VALIDATE $? "ansible"
 else
     echo "ansible is already installed"
+fi
