@@ -17,7 +17,7 @@ VALIDATE(){
     fi
 }
 CHECK_ROOT
-dnf installed mvn
+dnf list installed mvn
 if [ $? -ne 0]
 then
     echo "Maven is not installed.....going to install it"
