@@ -20,15 +20,15 @@ VALIDATE(){
     fi
 }
 CHECK_ROOT
-for i in {tree, ansible}
+for i in $@
 do
-dnf list installed $i
-if [$? -ne 0]
-then
-    echo "$i is not installed.....going to install it"
-    dnf install $i -y
-    VALIDATE $? $i
-else
-    echo "$i is already installed nothing to do"
-fi
+    dnf list installed $i
+    if [$? -ne 0]
+    then
+        echo "$i is not installed.....going to install it"
+        dnf install $i -y
+        VALIDATE $? $i
+    else
+        echo "$i is already installed nothing to do"
+    fi
 done
