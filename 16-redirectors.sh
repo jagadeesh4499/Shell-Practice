@@ -12,7 +12,7 @@ USERID=$(id -u)
 CHECK_ROOT(){
     if [ $USERID -ne 0 ]
     then
-        echo "$R Please run this script with root priveleges $N" &>>$LOG_FILE
+        echo -e "$R Please run this script with root priveleges $N" 
         exit 1
     fi
 }
@@ -26,7 +26,7 @@ VALIDATE(){
     fi
 }
 USAGE(){
-    echo "$R USAGE :: sh 16-redirectors.sh package1 package2 ... "
+    echo -e "$R USAGE :: sh 16-redirectors.sh package1 package2 ... "
     exit 1
 }
 CHECK_ROOT
@@ -43,6 +43,6 @@ do
         dnf install $i -y &>>$LOG_FILE
         VALIDATE $? "$i"
     else
-        echo "$i is already $Y installed nothing to do $N" &>>$LOG_FILE
+        echo -e "$i is already $Y installed nothing to do $N" &>>$LOG_FILE
     fi
 done
