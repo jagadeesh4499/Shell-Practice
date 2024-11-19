@@ -26,7 +26,7 @@ VALIDATE(){
     fi
 }
 USAGE(){
-    echo -e "$R USAGE :: sh 16-redirectors.sh package1 package2 ... "
+    echo -e "$R USAGE :: $N sh 16-redirectors.sh package1 package2 ... "
     exit 1
 }
 CHECK_ROOT
