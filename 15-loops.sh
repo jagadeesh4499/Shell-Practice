@@ -27,7 +27,7 @@ do
     then
         echo "$i is not installed.....going to install it"
         dnf install $i -y
-        VALIDATE $? $i
+        VALIDATE $? "$i"
     else
         echo "$i is already installed nothing to do"
     fi
