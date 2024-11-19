@@ -25,7 +25,15 @@ VALIDATE(){
         echo -e "$2 Installation is.....$G SUCCESS $N" &>>$LOG_FILE
     fi
 }
+USAGE(){
+    echo "$R USAGE :: sh 16-redirectors.sh package1 package2 ... "
+    exit 1
+}
 CHECK_ROOT
+if [ $# -eq 0 ]
+then
+    USAGE
+fi
 for i in $@
 do
     dnf list installed $i &>>$LOG_FILE
