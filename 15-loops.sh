@@ -31,3 +31,4 @@ then
 else
     echo "$i is already installed nothing to do"
 fi
+done
