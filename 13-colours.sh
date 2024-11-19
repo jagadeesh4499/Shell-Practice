@@ -24,7 +24,7 @@ dnf list installed tree
 if [ $? -ne 0 ]
 then
     echo "tree is not installed.....going to install it"
-    dnf install tree -y
+    dnf install treee -y
     VALIDATE $? "tree"
 else
     echo "tree is already installed."
@@ -33,7 +33,7 @@ dnf list installed ansible
 if [ $? -ne 0 ]
 then 
     echo "ansible is not installed.....going to install it"
-    dnf install ansible -y
+    dnf install ansiblee -y
     VALIDATE $? "ansible"
 else
     echo "ansible is already installed"
