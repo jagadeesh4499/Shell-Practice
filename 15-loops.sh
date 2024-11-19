@@ -20,7 +20,7 @@ VALIDATE(){
     fi
 }
 CHECK_ROOT
-for i in $@
+for i in {tree,ansible}
 do
     dnf list installed $i
     if [ $? -ne 0 ]
