@@ -12,17 +12,17 @@ USERID=$(id -u)
 CHECK_ROOT(){
     if [ $USERID -ne 0 ]
     then
-        echo -e "$R Please run this script with root priveleges $N" &>>$LOG_FILE
+        echo -e "$R Please run this script with root priveleges $N" | tee -a &>>$LOG_FILE
         exit 1
     fi
 }
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo -e "$2 Installation is.....$R FAILED $N" &>>$LOG_FILE
+        echo -e "$2 Installation is.....$R FAILED $N" | tee -a &>>$LOG_FILE
         exit 1
     else
-        echo -e "$2 Installation is.....$G SUCCESS $N" &>>$LOG_FILE
+        echo -e "$2 Installation is.....$G SUCCESS $N" | tee -a &>>$LOG_FILE
     fi
 }
 USAGE(){
@@ -39,10 +39,10 @@ do
     dnf list installed $i &>>$LOG_FILE
     if [ $? -ne 0 ]
     then
-        echo "$i is not installed.....going to install it" &>>$LOG_FILE
+        echo "$i is not installed.....going to install it" | tee -a &>>$LOG_FILE
         dnf install $i -y &>>$LOG_FILE
         VALIDATE $? "$i"
     else
-        echo -e "$i is already $Y installed nothing to do $N" &>>$LOG_FILE
+        echo -e "$i is already $Y installed nothing to do $N" | tee -a &>>$LOG_FILE
     fi
 done
