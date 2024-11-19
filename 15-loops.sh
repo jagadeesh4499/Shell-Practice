@@ -23,7 +23,7 @@ CHECK_ROOT
 for i in $@
 do
     dnf list installed $i
-    if [$? -ne 0]
+    if [ $? -ne 0 ]
     then
         echo "$i is not installed.....going to install it"
         dnf install $i -y
