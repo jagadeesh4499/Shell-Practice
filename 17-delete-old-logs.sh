@@ -10,7 +10,7 @@ else
     echo -e "$SOURCE_DIR....$R doesn't Exists $N"
     exit 1
 fi
-FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14 -execls -lrth {}\;)
+FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14 -exec ll {}\;)
 echo "FILES : $FILES"
 # while IFS= read -r file #IFS,internal field seperatpor, empty it will ignore while space.-r is for not to ingore special charecters like /
 # do
