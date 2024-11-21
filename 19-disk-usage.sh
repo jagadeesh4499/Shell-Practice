@@ -5,7 +5,7 @@ while IFS= read -r line #IFS,internal field seperatpor, empty it will ignore whi
 do
     USAGE=$(echo $line | awk -F " " '{print $6F}' | cut -d "%" -f1)
     PARTITION=$(echo $line | awk -F " " '{print $NF}')
-    if [ $DISK_USAGE -ge $DISK_THRESHOLD ]
+    if [ $USAGE -ge $DISK_THRESHOLD ]
     then
         echo "$PARTITION is more than $DISK_THRESHOLD, current value: $USAGE. Please check"
     fi
