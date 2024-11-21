@@ -5,6 +5,6 @@ while IFS= read -r line #IFS,internal field seperatpor, empty it will ignore whi
 do
     USAGE=$(echo $line | awk -F " " '{print $6F}' | cut -d "%" -f1)
     echo "$USAGE"
-    PARTITION=$(echo $line | awk -F " " '{print $2F}')
+    PARTITION=$(echo $line | awk -F " " '{print $NF}')
     echo "$PARTITION"
 done <<< $DISK_USAGE
