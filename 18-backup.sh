@@ -11,7 +11,7 @@ USAGE(){
     echo -e "$R USAGE : $N sh 19-backup.sh <source> <destination> <days(optional)>"
 }
 #check the source and destination are provided
-if [ $# -lt 2]
+if [ $# -lt 2 ]
 then
     USAGE
     exit 1
