@@ -24,7 +24,7 @@ if [ ! -d $DEST_DIR ]
 then 
     echo "$DEST_DIR doesn't exists......Please check"
 fi
-FILES=$(find $SOURCE_DIR -name "*.java" -mtime +$DAYS)
+FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 echo "FILES : $FILES"
 if [ ! -z $FILES ] #true if FILES is empty, ! makes it expression false
 then
