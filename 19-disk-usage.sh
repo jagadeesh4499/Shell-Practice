@@ -4,4 +4,5 @@ DISK_THRESHOLD=10
 while IFS= read -r line #IFS,internal field seperatpor, empty it will ignore while space.-r is for not to ingore special charecters like /
 do
     USAGE=$(echo $line | awk -F "{6F}")
+    echo "$USAGE"
 done <<< $DISK_USAGE
