@@ -24,13 +24,13 @@ if [ ! -d $DEST_DIR ]
 then 
     echo "$DEST_DIR doesn't exists......Please check"
 fi
-FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
+FILES=$(find $SOURCE_DIR -name "*.java" -mtime +$DAYS)
 echo "FILES : $FILES"
 if [ ! -z $FILES ] #true if FILES is empty, ! makes it expression false
 then
     echo "Files are found"
     ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
-    find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip "$ZIP_FILE" -@ #zip "file_name" -@ -> All the files
+    find $SOURCE_DIR -name "*.java" -mtime +$DAYS | zip "$ZIP_FILE" -@ #zip "file_name" -@ -> All the files
     #check if the zip file successfully created or not
     if [ -f $ZIP_FILE]
     then
