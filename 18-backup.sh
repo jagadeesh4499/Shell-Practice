@@ -32,7 +32,7 @@ then
     ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
     find $SOURCE_DIR -name "*.java" -mtime +$DAYS | zip "$ZIP_FILE" -@ #zip "file_name" -@ -> All the files
     #check if the zip file successfully created or not
-    if [ -f $ZIP_FILE]
+    if [ -f $ZIP_FILE ]
     then
         echo "Successfully zipped files older than $DAYS"
         #remove the files after zipping
