@@ -46,5 +46,5 @@ then
         exit 1
     fi
 else
-    echo "No files found older than $DAYS to zip"
+    echo "No files found older than $DAYS days to zip"
 fi
