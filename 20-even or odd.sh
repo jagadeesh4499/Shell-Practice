@@ -7,3 +7,4 @@ then
     echo number is even
 else
     echo number is odd
+fi
